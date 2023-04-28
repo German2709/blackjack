@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BlackJack</title>
+</head>
+
+<body>
+    <div class="tablero">
+        <div class="marco">
+            <div class="container">
+                <span id="tooltiptext">Debes apostar para repartir cartas y empezar a jugar.</span>
+                <div id="mazo"></div>
+                <div class="fichas">
+                    <button class="ficha" onclick="apostar(5)"><span id="ficha1"></span></button>
+                    <button class="ficha" onclick="apostar(10)"><span id="ficha2"></span></button>
+                    <button class="ficha" onclick="apostar(20)"><span id="ficha3"></span></button>
+                    <br>
+                    <p>valor de apuesta: <span id="apuesta"></span></p>
+                </div>
+                <p>Cartas de la casa: <br><span class="card cartas-mesa" id="cartasCasa"></span></p>
+                <p>Cartas del jugador:<br><span class="card cartas-mesa" id="cartasJugador"></span></p>
+                <p>puntuación de la casa:<br><span id="puntosCasa"></span></p>
+                <p>puntuación del jugador:<br><span id="puntosJugador"></span></p>
+                <br>
+                <div class="result">
+                    <p id="resultado"></p>
+                    <p id="ganador"></p>
+                    <p>saldo de apuesta: <span id="saldo"></span></p>
+                </div><br>
+                <div class="botones">
+                    <button id="juego"><span>Pedir Carta</span></button>
+                    <button id="start"><span>Seguir Apostando</span></button>
+                    <button id="end"><span>Plantarse</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

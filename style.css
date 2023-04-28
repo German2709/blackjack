@@ -1,0 +1,176 @@
+body {
+    background: url('https://static.vecteezy.com/system/resources/previews/016/124/961/non_2x/poker-and-casino-playing-card-background-in-red-vector.jpg');
+    background-size: cover;
+
+    height: 100vh;
+    margin: 0;
+
+    /* overflow-y: hidden; */
+}
+
+.tablero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50rem;
+    margin-top: 90px;
+}
+
+.marco {
+    width: 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url('https://w0.peakpx.com/wallpaper/750/864/HD-wallpaper-dark-brown-wood-texture-cherry-wood-texture-wooden-dark-background-natural-textures.jpg');
+    border-radius: 53px;
+    box-shadow: -1px 0px 9px 5px rgb(0, 0, 0) ;
+
+    padding: 25px;
+}
+
+.container {
+    width: 100%;
+
+    box-shadow: -1px 0px 19px 15px rgba(0, 0, 0, 0.733) inset;
+    border-radius: 53px;
+
+
+    background: url('cards/moqueta.jpg') center no-repeat;
+    background-size: cover;
+
+    text-align: center;
+    position: relative;
+}
+
+.container #tooltiptext {
+    width: 170px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 5px;
+
+    /* Posición del tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -45px;
+    transform: translate(-30%);
+}
+
+#mazo img {
+    position: absolute;
+    z-index: 0;
+    margin-top: 22px;
+}
+
+.naipe {
+    transition: all 1s;
+}
+
+.fichas button {
+    cursor: pointer;
+
+    width: 60px;
+    height: 60px;
+    margin-top: 42px;
+    margin-bottom: 22px;
+    margin-bottom: 22px;
+    margin-left: 64px;
+
+    border: 1px solid black;
+    border-radius: 200px 200px 200px 200px;
+    box-shadow: -3px 1px 0px 0px rgba(0, 0, 0, 1.70);
+
+    color: white;
+    font-weight: bolder;
+    position: relative;
+    transition: all 1s;
+
+}
+
+.fichas button:hover {
+    /* bottom: 5px; */
+    transform: rotateY(360deg);
+    /* transform: scale(1.150); */
+}
+
+.fichas button:nth-child(1) {
+    background: url(cards/ficha.png) center no-repeat;
+    background-size: 90px 60px;
+}
+
+.fichas button:nth-child(2) {
+    background: url(cards/ficha2.png) center no-repeat;
+    background-size: 90px 60px;
+}
+
+.fichas button:nth-child(3) {
+    background: url(cards/ficha3.png) center no-repeat;
+    background-size: 80px 60px;
+    z-index: 2;
+}
+
+.container p {
+    margin: 8px 0px;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+.result {
+    text-align: center;
+    height: 70px;
+}
+
+.botones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.botones button {
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+
+    background: url('https://thumb.photo-ac.com/0c/0c43c904fdae646062481f77db53af41_w.jpeg') center;
+    background-size: 95px 50px;
+    cursor: pointer;
+    opacity: 0.9;
+
+    position: relative;
+}
+
+button:hover {
+    bottom: 5px;
+}
+
+.botones button span {
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px -2px rgb(255, 63, 63);
+    background-color: rgba(0, 0, 0, 0.459);
+}
+
+img {
+    height: 100px;
+    width: 55px;
+    margin: 10px;
+}
