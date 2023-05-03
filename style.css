@@ -4,7 +4,10 @@ body {
 
     height: 100vh;
     margin: 0;
-
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* overflow-y: hidden; */
 }
 
@@ -13,13 +16,14 @@ body {
     justify-content: center;
     align-items: center;
 
-    height: 50rem;
-    margin-top: 90px;
+    width: 60%;
+
+    /* height: 50rem; */
+    /* margin-top: 90px; */
 }
 
 .marco {
-    width: 60%;
-
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

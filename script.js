@@ -1,4 +1,6 @@
 // variables para imprimir en pantalla
+let playing = document.getElementById('play');
+let tablero = document.getElementById('tablero');
 let casa = document.getElementById('cartasCasa');
 let jugador = document.getElementById('cartasJugador');
 let puntosC = document.getElementById('puntosCasa');
@@ -49,6 +51,14 @@ let cartasCasa = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 
 // Juego del jugador
 let cartasJugador = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+
+tablero.style.opacity = '0';
+tablero.style.transition = 'all 1s';
+function play() {
+    tablero.style.transform = 'rotateX(360deg)';
+    tablero.style.opacity = '1';
+    playing.style.display='none';
+}
 
 function empezarJuego() {
     jugadaJugador = [];
@@ -342,9 +352,19 @@ function repartir(reparto) {
     }
 }
 
+function bancaRota() {
+    if (confirm('Ya no tienes saldo. ¿Quieres reiniciar el juego?') == true) {
+        location.reload();
+        valorApuesta -= x;
+    } else {
+        valorApuesta -= x;
+    }
+}
+
 function apostar(x) {
     // se resta la apuesta del saldo y se muestra valorApuesta de la apusta
     repartir("barajaMesa");
+    if (saldoTotal < x) bancaRota();
     saldoTotal -= x;
     valorApuesta += x;
     apuesta.innerHTML = valorApuesta + "€";
